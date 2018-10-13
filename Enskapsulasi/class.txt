@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class bangundatar
+    {
+        private int diagonal_1;
+
+        public int getdiagonal_1()
+        {
+
+            return diagonal_1;
+        }
+
+        public int setdiagonal_1(int ndiagonal_1) 
+        {
+
+            diagonal_1 = ndiagonal_1;
+            return ndiagonal_1;
+        
+        }
+
+        private int diagonal_2;
+
+        public int getdiagonal_2()
+        {
+
+            return diagonal_2;
+        }
+
+        public int setdiagonal_2(int ndiagonal_2)
+        {
+
+            diagonal_2 = ndiagonal_2;
+            return ndiagonal_2;
+
+        }
+
+
+    }
+}

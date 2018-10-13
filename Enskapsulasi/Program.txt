@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            bangundatar layanglayang = new bangundatar();
+            Console.WriteLine("*******Layang - Layang*******");
+            Console.Write("Input Diagonal 1     =");
+            int diagonal1 = Convert.ToInt32(Console.ReadLine());
+            int diagonal_1 = layanglayang.setdiagonal_1(diagonal1);
+            int diagagonal__1 = layanglayang.getdiagonal_1();
+            Console.Write("Input Diagonal 2     =");
+            int diagonal2 = Convert.ToInt32(Console.ReadLine());
+            int diagonal_2 = layanglayang.setdiagonal_2(diagonal2);
+            int diagagonal__2 = layanglayang.getdiagonal_2();
+            int luas = diagagonal__1 * diagagonal__2 / 2;
+            Console.WriteLine("Luas Layang Layang  =" + luas);
+            Console.ReadLine();           
+
+
+
+        }
+    }
+}
