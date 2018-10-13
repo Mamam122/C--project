@@ -1,0 +1,36 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace bidang_datar
+{
+    class persegiPanjang : bidangDatar
+    {
+        public override double luas()
+        {
+            Console.WriteLine("Luas Persegi Panjang");
+            Console.Write("Input Panjang  :");
+            double panjang = Convert.ToInt16(Console.ReadLine());
+            Console.Write("Input Lebar    :");
+            double lebar = Convert.ToInt16(Console.ReadLine());
+            Luas = panjang * lebar;
+            Keliling = (panjang + lebar) * 2; 
+            Console.WriteLine("Luas Persegi Panjangg  =" + Luas);
+            Console.WriteLine("Luas Persegi Panjangg  =" + Keliling);
+            Console.ReadLine();
+            Console.Clear();
+            return Luas;
+
+        }
+
+        public override double keliling()
+        {
+
+            
+            return Keliling;
+
+        }
+    }
+}

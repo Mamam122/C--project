@@ -1,0 +1,30 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace bidang_datar
+{
+    
+    class balok : bidangDatar
+    {
+
+        public override double luas()
+        {
+            Console.Write("Input Panjang   = ");
+            double panjangbalok = Convert.ToInt16(Console.ReadLine());
+            Console.Write("Input Lebar     = ");
+            double lebarbalok = Convert.ToInt16(Console.ReadLine());
+            Console.Write("Input Tinggi    = ");
+            Double tinggibalok = Convert.ToInt16(Console.ReadLine());
+            double Luas = panjangbalok * lebarbalok * tinggibalok;
+            double Keliling = 2 * ((panjangbalok * tinggibalok) + (panjangbalok * lebarbalok) + (lebarbalok * tinggibalok));
+            Console.WriteLine("Volume Balok    = " + Luas);
+            Console.WriteLine("Luas Permukaan  =" + Keliling);
+            Console.ReadLine();
+            Console.Clear();
+            return Luas;
+        }
+    }
+}

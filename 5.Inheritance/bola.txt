@@ -1,0 +1,26 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace bidang_datar
+{
+    class bola :bidangDatar
+    {
+        public override double luas()
+        {
+            Console.WriteLine("Bola");
+            Console.Write("Input Jari Jari Bola     = ");
+            double jarijaribola = Convert.ToInt32(Console.ReadLine());
+            double Luas = 4 * phi * jarijaribola * jarijaribola * jarijaribola / 3;
+            double Keliling = 4 * phi * jarijaribola * jarijaribola;
+            Console.WriteLine("Volume Bola   = " + Luas);
+            Console.WriteLine("Luas Permukaan Bola = " + Keliling);
+            
+            Console.ReadLine();
+            Console.Clear();
+            return base.luas();
+        }
+    }
+}

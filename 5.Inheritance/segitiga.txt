@@ -1,0 +1,40 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace bidang_datar
+{
+    class segitiga : bidangDatar
+    {
+
+        public override double luas()
+        {
+            Console.WriteLine("Segitiga");
+            Console.Write("Input Tingi Segitiga   =   ");
+            double tinggisegitiga = Convert.ToInt16(Console.ReadLine());
+            Console.Write("Input Alas Segitiga  =   ");
+            double alassegitiga = Convert.ToInt16(Console.ReadLine());
+            Console.Write("Input Sisi Miring 1  =   ");
+            double sisimiring1 = Convert.ToInt16(Console.ReadLine());
+            Console.Write("Input Sisi Miring 2  =   ");
+            double sisimiring2 = Convert.ToInt16(Console.ReadLine());
+            double kelilingsegitiga = alassegitiga + sisimiring1 + sisimiring2;
+            double luassegitiga = tinggisegitiga * alassegitiga / 2;
+            Console.WriteLine("Luas Segitiga =   " + Luas);
+            Console.WriteLine("Keliling Segitiga = " + Keliling);
+            Console.ReadLine();
+            Console.Clear();
+            
+                    
+
+            return Luas;
+        }
+
+        public override double keliling()
+        {
+            return Keliling;
+        }
+    }
+}

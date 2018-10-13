@@ -1,0 +1,84 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+ 
+namespace bidang_datar
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            persegiPanjang Luas_persegipanjang = new persegiPanjang();
+            persegi Luas_persegi = new persegi();
+            segitiga Luas_segitiga = new segitiga();
+            lingkaran Luas_lingkaran = new lingkaran();
+            Kubus Volume_kubus = new Kubus();
+            balok Volume_balok = new balok();
+            bola Volume_bola = new bola();
+        kembali:
+            Console.WriteLine("Aritmatika");
+            Console.WriteLine("1. Persegi");
+            Console.WriteLine("2. Persegi Panjang");
+            Console.WriteLine("3. Segitiga");
+            Console.WriteLine("4. Lingkaran");
+            Console.WriteLine("5. Kubus");
+            Console.WriteLine("6. Balok");
+            Console.WriteLine("7. Bola");
+            Console.WriteLine("8. Exit");
+
+            Console.Write("Pilih angka  :");
+            int pilih = int.Parse(Console.ReadLine());
+            Console.Clear();
+            switch (pilih) { 
+                case 1:
+
+                    Luas_persegi.luas();
+                   
+                   
+                    goto kembali;
+                    
+                    break;
+
+                case 2:
+           Luas_persegipanjang.luas();
+           
+           
+           goto kembali;
+
+           break;
+                case 3:
+           Luas_segitiga.luas();
+           goto kembali;
+                    break;
+                case 4:
+                    Luas_lingkaran.luas();
+                    goto kembali;
+
+                    break;
+                case 5:
+                    Volume_kubus.luas();
+                    goto kembali;
+                    break;
+                case 6:
+                    Volume_balok.luas();
+                    goto kembali;
+                    break;
+
+
+                case 7:
+                    Volume_bola.luas();
+                    goto kembali;
+                    break;
+
+                case 8:
+                    Environment.Exit(0);
+                    break;
+            
+            
+            }
+           
+        }
+    }
+}

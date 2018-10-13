@@ -1,0 +1,414 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double phi = 3.14;
+            kembali:
+            Console.WriteLine("-----------------KalKulator---------------" + System.Environment.NewLine);
+            Console.WriteLine("Pilih salah satu operasi" + System.Environment.NewLine);
+            Console.WriteLine("1 Segitiga");
+            Console.WriteLine("2 Persegi");
+            Console.WriteLine("3 Persegi Panjang");
+            Console.WriteLine("4 JajarGenjang");
+            Console.WriteLine("5 Trapesium");
+            Console.WriteLine("6 Layang Layang");
+            Console.WriteLine("7 Tabung");
+            Console.WriteLine("8 Kubus");
+            Console.WriteLine("9 Balok");
+            Console.WriteLine("10 Limas");
+            Console.WriteLine("11 Prisma");
+            Console.WriteLine("12 Bola");
+            Console.WriteLine("13 Kerucut" + System.Environment.NewLine);
+            Console.WriteLine("14 Exit");
+            Console.WriteLine("\n");
+            Console.Write("Input Disini         :");
+           
+            
+            int pilih = int.Parse(Console.ReadLine());
+
+            Console.Clear();
+            switch (pilih) 
+                
+            {
+                case 1:
+                    Console.WriteLine("Segitiga");
+                    Console.Write("Input Tingi Segitiga   =   ");
+                    double tinggisegitiga = Convert.ToInt16(Console.ReadLine());
+                    Console.Write("Input Alas Segitiga  =   ");
+                    double alassegitiga = Convert.ToInt16(Console.ReadLine());
+                    Console.Write("Input Sisi Miring 1  =   ");
+                    double sisimiring1 = Convert.ToInt16(Console.ReadLine());
+                    Console.Write("Input Sisi Miring 2  =   ");
+                    double sisimiring2 = Convert.ToInt16(Console.ReadLine());
+                    double kelilingsegitiga = alassegitiga + sisimiring1 + sisimiring2;
+                    double luassegitiga = tinggisegitiga * alassegitiga / 2;
+                    Console.WriteLine("Luas Segitiga =   "  + luassegitiga);
+                    Console.WriteLine("Keliling Segitiga = " +kelilingsegitiga);
+                    Console.WriteLine("Klik Enter untuk Kembali......");
+                    Console.ReadLine();
+                    Console.Clear();
+                    goto kembali;
+                    
+                    break;
+
+               case 2:
+                    Console.WriteLine("Persegei");
+                    Console.Write("Input Sisi Persegi    =   ");
+                    double sisipersegi = Convert.ToInt16(Console.ReadLine());
+                    double luaspersegi = sisipersegi * sisipersegi;
+                    double kelilingpersegi = sisipersegi * 4;
+                    Console.WriteLine("Luas Persegi =   "+ luaspersegi);
+                    Console.WriteLine("Keliling Persegi   = "+ kelilingpersegi);
+                    Console.WriteLine("Klik Enter untuk Kembali......");
+                    Console.ReadLine();
+                    Console.Clear();
+                    goto kembali;
+
+
+                    break;
+
+                case 3:
+                    Console.WriteLine("Persegi Panjang");
+                    Console.Write("Input Panjang    =   ");
+                    double sisipanjang = Convert.ToInt16(Console.ReadLine());
+                    Console.Write("Input Lebar    =   ");
+                    double sisilebar = Convert.ToInt16(Console.ReadLine());
+                    double luaspersegipanjang = sisipanjang * sisilebar;
+                    double kelilingpersegipanjang = 2 * (sisipanjang + sisilebar);
+                    Console.WriteLine("Luas Persegi Panjang =   "+ luaspersegipanjang);
+                    Console.WriteLine("Keliling Persegi Panjang = "+ kelilingpersegipanjang);
+                    Console.WriteLine("Klik Enter untuk Kembali......");
+                    Console.ReadLine();
+                    Console.Clear();
+                    goto kembali;
+
+                    break;
+
+                case 4:
+                    Console.WriteLine("JajarGenjang");
+                    Console.Write("Input Alas Jajargenjang   =  ");
+                    double alasjajargenjang = Convert.ToInt16(Console.ReadLine());
+                    Console.Write("Input Tinggi Jajargenjang  =  ");
+                    double tinggijajargenjang = Convert.ToInt16(Console.ReadLine());
+                    double luasjajargenjang = alasjajargenjang * tinggijajargenjang;
+                    Console.Write("Input SisiMiring         =  ");
+                    double sisimiringjajargnjang = Convert.ToInt32(Console.ReadLine());
+                    double kelilingjajar = (alasjajargenjang * 2) + (sisimiringjajargnjang * 2);
+                    Console.WriteLine("Luas Jajar Genjang  = "+ luasjajargenjang);
+                    Console.WriteLine("Keliling Jajar Genjang = "+ kelilingjajar);
+                    Console.WriteLine("Klik Enter untuk Kembali......");
+                    Console.ReadLine();
+                    Console.Clear();
+                    goto kembali;
+                    break;
+
+                case 5:
+                    Console.WriteLine("Trapesium");
+                    Console.Write("Input Alas Trapesium   =  ");
+                    double alastrapesium = Convert.ToInt16(Console.ReadLine());
+                    Console.Write("Input Alas pendek Trapesium   =  ");
+                    double alastrapesiumpendek = Convert.ToInt16(Console.ReadLine());
+                    Console.Write("Input Sisi Miring Trapesium   =  " );
+                    double sisimiringtrapesium = Convert.ToInt16(Console.ReadLine());
+                    Console.Write("Input Tinggi Trapesium   =  ");
+                    double tinggitrapesium = Convert.ToInt16(Console.ReadLine());
+                    double luastrapesium = (alastrapesium + alastrapesiumpendek)* tinggitrapesium /2;
+                    double kelilingtrapesium = alastrapesium + alastrapesiumpendek + sisimiringtrapesium + tinggitrapesium;
+                    Console.WriteLine("Luas Trapesium  = "+ luastrapesium);
+                    Console.WriteLine("Keliling Trapesium = "+ kelilingtrapesium);
+                    Console.WriteLine("Klik Enter untuk Kembali......");
+                    Console.ReadLine();
+                    Console.Clear();
+                    goto kembali;
+                    break;
+
+                case 6:
+                    Console.WriteLine("Layang Layang");
+                    Console.Write("Input D1   =  ");
+                    double diagonal1 = Convert.ToInt16(Console.ReadLine());
+                    Console.Write("Input D2   =  ");
+                    double diagonal2 = Convert.ToInt16(Console.ReadLine());
+                    Console.Write("Input Sisi Miring 1   =  ");
+                    double sisimiring1lay = Convert.ToInt16(Console.ReadLine());
+                    Console.Write("Input Sisi Miring 2   =  ");
+                    double sisimiring2lay = Convert.ToInt16(Console.ReadLine());
+                    double kelilinglayanglayang = (sisimiring1lay * 2) + (sisimiring2lay * 2);
+                    double luaslayanglayang = diagonal1 * diagonal2 / 2;
+                    Console.WriteLine("Luas Layang Layang   = "+ luaslayanglayang);
+                    Console.WriteLine("Keliling Layang Layang   = "+ kelilinglayanglayang);
+                    Console.WriteLine("Klik Enter untuk Kembali......");
+                    Console.ReadLine();
+                    Console.Clear();
+                    goto kembali;
+                    break;
+
+
+                case 7:
+                    Console.WriteLine("Tabung");
+                    Console.Write("Input Radius   = ");
+                    double radiustabung = Convert.ToInt16(Console.ReadLine());
+                    Console.Write("Input Tinggi   = ");
+                    double tinggitabung = Convert.ToInt16(Console.ReadLine());
+                    double volumetabung = phi * radiustabung * radiustabung * tinggitabung;
+                    double luastabung = 2 * phi * radiustabung * (radiustabung + tinggitabung);
+                    Console.WriteLine("Volume Tabung  = "+volumetabung);
+                    Console.WriteLine("Klik Enter untuk Kembali......");
+                    Console.ReadLine();
+                    Console.Clear();
+                    goto kembali;
+                    break;
+                
+                case 8:
+                    Console.WriteLine("Kubus");
+                    Console.Write("Input Sisi   = ");
+                    double sisikubus = Convert.ToInt16(Console.ReadLine());
+                    double volumekubus = sisikubus * sisikubus * sisikubus;
+                    double luaspermukaankubus = (sisikubus * sisikubus) * 6;
+                    Console.WriteLine("Volume Kubus  = "+volumekubus);
+                    Console.WriteLine("Luas Permukaan Kubus  = "+luaspermukaankubus);
+                    Console.WriteLine("Klik Enter untuk Kembali......");
+                    Console.ReadLine();
+                    Console.Clear();
+                    goto kembali;
+                    break;
+
+                case 9:
+                    Console.WriteLine("Balok");
+                    Console.Write("Input Panjang   = ");
+                    double panjangbalok = Convert.ToInt16(Console.ReadLine());
+                    Console.Write("Input Lebar     = ");
+                    double lebarbalok = Convert.ToInt16(Console.ReadLine());
+                    Console.Write("Input Tinggi    = ");
+                    Double tinggibalok = Convert.ToInt16(Console.ReadLine());
+                    double volumebalok = panjangbalok * lebarbalok * tinggibalok;
+                    double luaspermukaanbalok = 2 *((panjangbalok * tinggibalok)+(panjangbalok * lebarbalok)+(lebarbalok * tinggibalok));
+                    Console.WriteLine("Volume Balok    = "+volumebalok);
+                    Console.WriteLine("Klik Enter untuk Kembali......");
+                    Console.ReadLine();
+                    Console.Clear();
+                    goto kembali;
+                    break;
+                  
+                    case 10:
+                        
+                    Console.WriteLine("Limas");
+                    Console.Write("Limas Segi Berapa ? (3-4) ");
+                    Console.ReadLine();
+                    int angkainput = int.Parse(Console.ReadLine());
+                    Console.Clear();
+                    if(angkainput == 3 )
+{
+                    Console.WriteLine("Limas Segitiga");
+                    Console.Write("Input tinggi segitiga   = ");
+                    Double tinggisegitgalimas = Convert.ToInt16(Console.ReadLine());
+                    Console.Write("Input alas segitiga     = ");
+                    int alassegitigalimas = Convert.ToInt16(Console.ReadLine());
+                    double luassegitgalimas = alassegitigalimas * tinggisegitgalimas / 2;
+                    Console.Write("Input Tinggi Limas    = ");
+                    int tinggilimas = Convert.ToInt16(Console.ReadLine());
+                    double volumelimassegitiga = luassegitgalimas * tinggilimas / 3;
+                    Console.WriteLine("Volume Limas Segitiga    = "+volumelimassegitiga);
+                        Console.WriteLine("Klik Enter untuk Kembali......");
+                    Console.ReadLine();
+                    Console.Clear();
+                    goto kembali;
+}                    
+                    if(angkainput == 4){
+                  
+                    Console.WriteLine("Limas Segiempat");
+                    Console.Write("Input Sisi 1    = ");
+                    double sisi1 = Convert.ToInt32(Console.ReadLine());
+                    Console.Write("Input Sisi 2    = ");
+                    double sisi2 = Convert.ToInt32(Console.ReadLine());
+                    double luaslimassegiempat = sisi1 * sisi2;
+                    Console.Write("Input Tinggi Limas   = ");
+                    double tinggilimassegiempat = Convert.ToInt32(Console.ReadLine());
+                    double volumelimassegiempat = luaslimassegiempat * tinggilimassegiempat /3;
+                    Console.WriteLine("Volume Limas Segiempat   = "+volumelimassegiempat);
+                        Console.WriteLine("Klik Enter untuk Kembali......");
+                    Console.ReadLine();
+                    Console.Clear();
+                    goto kembali;
+                    
+}
+
+                   break;
+                    
+                    case 11:
+                    
+                    
+                    Console.WriteLine("Prisma");
+                    Console.Write("Prisma Segi Berapa ?(3-4)");
+                  
+                    int angkainput1 = int.Parse(Console.ReadLine());
+                    Console.Clear();
+                    if(angkainput1 == 3 )
+{
+                    Console.WriteLine("Prisma Segitiga");
+                    Console.WriteLine("Pilih Jenis Segitiga  (1-2)    " + System.Environment.NewLine);
+                    Console.WriteLine("1. Segitiga Siku Siku      ");
+                    Console.WriteLine("2. Segitiga Sembarang      ");
+                    
+                    int pilihsegitiga = int.Parse(Console.ReadLine());
+                        Console.Clear();
+                    switch(pilihsegitiga){
+                    
+                            case 1:
+                    Console.WriteLine("Prisma Segitiga Siku Siku");                     
+                    Console.Write("Input tinggi segitiga   = ");
+                    Double tinggisegitgaprisma = Convert.ToInt16(Console.ReadLine());
+                    Console.Write("Input alas segitiga     = ");
+                    double alassegitigaprisma = Convert.ToInt16(Console.ReadLine());
+                    Console.Write("Input sisimiring segitiga     = ");
+                    double sisimiringsegitiga = Convert.ToInt16(Console.ReadLine());
+                    Console.Write("Input Tinggi Prisma   = ");
+                    double tinggiprisma = Convert.ToInt16(Console.ReadLine());
+                                 double luassegitgaprisma = alassegitigaprisma * tinggisegitgaprisma / 2;
+                    double volumeprismasegitiga = luassegitgaprisma * tinggiprisma ;
+                   
+                    double kelilingsegitigaprisma = (alassegitigaprisma * tinggisegitgaprisma) + (tinggisegitgaprisma * tinggiprisma) + (alassegitigaprisma + tinggiprisma) + (sisimiringsegitiga * tinggiprisma);
+                    Console.WriteLine("Volume Prisma Segitiga    = "+volumeprismasegitiga);
+                    Console.WriteLine("Luas Permukaan Setiga     = " +kelilingsegitigaprisma);
+                                Console.WriteLine("Klik Enter untuk Kembali......");
+                    Console.ReadLine();
+                    Console.Clear();
+                    goto kembali;
+
+                                break;
+                            case 2:
+                    Console.WriteLine("Prisma Segitiga Sembarang");
+                    Console.Write("Input tinggi segitiga   = ");
+                    Double tinggisegitgaprisma1 = Convert.ToInt16(Console.ReadLine());
+                    Console.Write("Input alas segitiga     = ");
+                    double alassegitigaprisma1 = Convert.ToInt16(Console.ReadLine());
+                    Console.Write("Input sisi a     = ");
+                    double sisia = Convert.ToInt16(Console.ReadLine());
+                    Console.Write("Input sisi b     = ");
+                    double sisib = Convert.ToInt16(Console.ReadLine());
+                    Console.Write("Input Tinggi Prisma    = ");
+                    double tinggiprisma1 = Convert.ToInt16(Console.ReadLine());
+                    double luassegitgaprisma1 = alassegitigaprisma1 * tinggisegitgaprisma1 / 2;
+                    double volumeprismasegitiga1 = luassegitgaprisma1 * tinggiprisma1 ;
+                    
+                    double kelilingsegitigaprisma1 = (alassegitigaprisma1 * tinggisegitgaprisma1) + (sisia * tinggiprisma1) + (alassegitigaprisma1 + tinggiprisma1) + (sisib * tinggiprisma1);
+                    Console.WriteLine("Volume Prisma Segitiga    = "+volumeprismasegitiga1);
+                    Console.WriteLine("Luas Permukaan Setiga     = " +kelilingsegitigaprisma1);
+                                Console.WriteLine("Klik Enter untuk Kembali......");
+                    Console.ReadLine();
+                    Console.Clear();
+                    goto kembali;
+
+
+                                break;
+}                    }
+                    if(angkainput1 == 4)
+{
+                  
+                    Console.WriteLine("Prisma Segiempat");
+                    Console.WriteLine("1. Persegi");
+                    Console.WriteLine("2. Persegi Panjang");
+                    Console.Write("Input Pilihan Anda (1-2)  = ");
+                    int pilihprisma = int.Parse(Console.ReadLine());
+                        Console.Clear();
+                    switch(pilihprisma){
+                    
+                    case 2:
+                    Console.WriteLine("Prisma Persegi Panjang");
+                    Console.Write("Input Panjang Prisma   = ");
+                    double prismasisi1 = Convert.ToInt32(Console.ReadLine());
+                    Console.Write("Input Lebar Prisma  = ");
+                    double prismasisi2 = Convert.ToInt32(Console.ReadLine());
+                    double luasprismasegiempat = prismasisi1 * prismasisi2;
+                    Console.Write("Input Tinggi Prisma   = ");
+                    double tinggiprismasegiempat = Convert.ToInt32(Console.ReadLine());
+                    double volumeprismasegiempat = luasprismasegiempat * tinggiprismasegiempat ;
+                    double luaspermukaanprisma = 2 *((prismasisi1 * prismasisi2)+(prismasisi2 * tinggiprismasegiempat)+(prismasisi1 * tinggiprismasegiempat));
+                    Console.WriteLine("Volume Prisma Segiempat Persegi Panjang  = "+volumeprismasegiempat);
+                    Console.WriteLine("Luas Permukaan Prisma Persegi Panjang    = "+luaspermukaanprisma);
+                                Console.WriteLine("Klik Enter untuk Kembali......");
+                    Console.ReadLine();
+                    Console.Clear();
+                    goto kembali;
+                    break;
+
+                    case 1:
+                    Console.WriteLine("Prisma Persegi ");
+                    Console.Write("Input Sisi       = ");
+                    double sisiprismapersegi = Convert.ToInt32(Console.ReadLine());
+                    double volumeprismapersegi = sisiprismapersegi * sisiprismapersegi * sisiprismapersegi;
+                    double luaspermukaanprismapersegi = 6 * (sisiprismapersegi * sisiprismapersegi);
+                    Console.WriteLine("Volume Prisma Persegi    = " +volumeprismapersegi);
+                    Console.WriteLine("Luas Permukaan Prisma Persegi    = " +luaspermukaanprismapersegi);
+                                Console.WriteLine("Klik Enter untuk Kembali......");
+                    Console.ReadLine();
+                    Console.Clear();
+                    goto kembali;
+                    break;
+
+                    
+
+}       }            
+                 
+                    break;
+
+                    case 12:
+
+                    Console.WriteLine("Bola");
+                    Console.Write("Input Jari Jari Bola     = ");
+                    double jarijaribola = Convert.ToInt32(Console.ReadLine());
+                    double volumebola = 4 * phi * jarijaribola * jarijaribola * jarijaribola /3;
+                    double luaspermukaanbola = 4 * phi * jarijaribola * jarijaribola;
+                    Console.WriteLine("Volume Bola   = "+volumebola);
+                    Console.WriteLine("Luas Permukaan Bola = "+luaspermukaanbola);
+                    Console.WriteLine("Klik Enter untuk Kembali......");
+                    Console.ReadLine();
+                    Console.Clear();
+                    goto kembali;
+
+                    break;
+
+                    case 13:
+
+                    Console.WriteLine("Kerucut");
+                    Console.Write("Input Jari Jari Kerucut    = ");
+                    double jarijarikerucut = Convert.ToInt32(Console.ReadLine());
+                    Console.Write("Input Tinggi Kerucut       = ");
+                    double tinggikerucut = Convert.ToInt32(Console.ReadLine());
+                    Console.Write("Input Garis Pelukis        = ");
+                    double garispelukis = Convert.ToInt32(Console.ReadLine());
+                    double luaspermukaankerucut = phi * jarijarikerucut * (jarijarikerucut + garispelukis);
+                    double volumekerucut = 3.14 * jarijarikerucut * jarijarikerucut * tinggikerucut / 3; 
+                    Console.WriteLine("Volume Kerucut             = "+volumekerucut);
+                    Console.WriteLine("Luas Permukaan Kerucut     = "+luaspermukaankerucut);
+                    Console.WriteLine("Klik Enter untuk Kembali......");
+                    Console.ReadLine();
+                    Console.Clear();
+                    goto kembali;
+                    break;
+
+
+
+                    case 14:
+                    Environment.Exit(0);
+                    break;
+}
+
+
+
+
+
+
+}  
+  
+
+}}
+    
+

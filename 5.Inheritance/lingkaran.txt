@@ -1,0 +1,25 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace bidang_datar
+{
+    class lingkaran : bidangDatar
+    {
+        public override double luas()
+        {
+            Console.WriteLine("Lingkara");
+            Console.Write("Input Jari Jari =   ");
+            double jarijari = Convert.ToInt16(Console.ReadLine());
+            double Luas = phi * jarijari * jarijari;
+            double Keliling = phi * (jarijari + jarijari);
+            Console.WriteLine("Luas Lingkaran    =" + Luas);
+            Console.WriteLine("Keliling Lingkaran  = " + Keliling);
+            Console.ReadLine();
+            Console.Clear();
+            return base.luas();
+        }
+    }
+}

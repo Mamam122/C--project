@@ -1,0 +1,487 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace classandobject
+{
+    class bangundatar
+    {
+
+        public void menu()
+        {
+            menu2:
+            Console.Clear();
+            string jawab2;
+            Console.WriteLine("---Menu Penghitungan luas dan keliling Bangun datar---"+System.Environment.NewLine);
+            Console.WriteLine("1.Luas dan Keliling Persegi");
+            Console.WriteLine("2.Luas dan Keliling Persegi Panjang");
+            Console.WriteLine("3.Luas dan Keliling Segitiga");
+            Console.WriteLine("4.Luas dan Keliling Jajar Genjang");
+            Console.WriteLine("5.Luas dan Keliling Layang-Layang");
+            Console.WriteLine("6.Luas dan Keliling Belah Ketupat");
+            Console.WriteLine("7.Luas dan Keliling Lingkaran");
+            Console.WriteLine("8.Luas dan Keliling Trapesium"+System.Environment.NewLine);
+            Console.Write("Tentukan Pilihanmu : ");
+            int pilihan = int.Parse(Console.ReadLine());
+            switch (pilihan)
+            {
+                case 1:
+                    Console.Clear();
+                    bangundatar persegi = new bangundatar();
+                    persegi.getsisip();
+                    Console.WriteLine("Persegi");
+
+                    Console.Write("Masukkan Sisi :");
+                    double Sisi = Convert.ToInt64(Console.ReadLine());
+                    double nsisip = persegi.setsisip(Sisi);
+
+                    Console.WriteLine("Luas Persegi :{0}", Sisi * Sisi);
+                    Console.WriteLine("Keliling Persegi :{0}", 4 * Sisi);
+                    Console.Write("Kembali ke menu awal? (Y/T) : ");
+                    jawab2 = Console.ReadLine();
+                    if (jawab2 == "Y" || jawab2 == "y")
+                        goto menu2;
+                    else
+                        Environment.Exit(0);
+                    break;
+                case 2:
+                    Console.Clear();
+                    bangundatar pp = new bangundatar();
+                    pp.getpanjangpp();
+                    pp.getlebarpp();
+                    Console.WriteLine("Persegi panjang");
+                    Console.Write("Masukkan panjang :");
+                    double panjangp = Convert.ToInt64(Console.ReadLine());
+                    double npanjangpp = pp.setpanjangpp(panjangp);
+
+                    Console.Write("Masukkan lebar :");
+                    double lebarp = Convert.ToInt64(Console.ReadLine());
+                    double nlebarpp = pp.setlebarpp(lebarp);
+                    Console.WriteLine("Luas persegi panjang :{0}", lebarp * panjangp);
+                    Console.WriteLine("Keliling persegi panjang :{0}", 2 * (lebarp + panjangp));
+                    Console.Write("Kembali ke menu awal? (Y/T) : ");
+                    jawab2 = Console.ReadLine();
+                    if (jawab2 == "Y" || jawab2 == "y")
+                        goto menu2;
+                    else
+                        Environment.Exit(0);
+                    break;
+                case 3:
+                    Console.Clear();
+                    bangundatar segitiga = new bangundatar();
+                    segitiga.getalassg();
+                    segitiga.gettinggisg();
+                    Console.WriteLine("Segitiga");
+
+                    Console.Write("Masukkan alas :");
+                    double alass = Convert.ToInt64(Console.ReadLine());
+                    double nalassg = segitiga.setalassg(alass);
+
+                    Console.Write("Masukkan tinggi :");
+                    double tinggis = Convert.ToInt64(Console.ReadLine());
+                    double ntinggisg = segitiga.settinggisg(tinggis);
+
+                    Console.WriteLine("Luas Segitiga :{0}", alass * tinggis / 2);
+                    Console.WriteLine("Keliling Segitiga :{0}", 3 * alass);
+                    Console.Write("Kembali ke menu awal? (Y/T) : ");
+                    jawab2 = Console.ReadLine();
+                    if (jawab2 == "Y" || jawab2 == "y")
+                        goto menu2;
+                    else
+                        Environment.Exit(0);
+                    break;
+                case 4:
+                    Console.Clear();
+                    bangundatar jg = new bangundatar();
+                    jg.getalasjg();
+                    jg.gettinggijg();
+                    jg.getsisijg();
+                    Console.WriteLine("Jajar Genjang");
+                    Console.Write("Masukkan alas :");
+                    double alasj = Convert.ToInt64(Console.ReadLine());
+                    double nalasjg = jg.setalasjg(alasj);
+
+                    Console.Write("Masukkan tinggi :");
+                    double tinggij = Convert.ToInt64(Console.ReadLine());
+                    double ntinggijg = jg.setlebarpp(tinggij);
+
+                    Console.Write("Masukkan sisi :");
+                    double sisij = Convert.ToInt64(Console.ReadLine());
+                    double nsisijg = jg.setlebarpp(sisij);
+
+                    Console.WriteLine("Luas jajar genjang :{0}", alasj * tinggij);
+                    Console.WriteLine("Keliling persegi panjang :{0}", 2 * (alasj + sisij));
+                    Console.Write("Kembali ke menu awal? (Y/T) : ");
+                    jawab2 = Console.ReadLine();
+                    if (jawab2 == "Y" || jawab2 == "y")
+                        goto menu2;
+                    else
+                        Environment.Exit(0);
+                    break;
+                case 5:
+                    Console.Clear();
+                    bangundatar ll = new bangundatar();
+                    ll.getd1ll();
+                    ll.getd2ll();
+                    ll.getsisiall();
+                    ll.getsisibll();
+                    Console.WriteLine("Layang - Layang");
+                    Console.Write("Masukkan Diagonal 1 :");
+                    double d1ll = Convert.ToInt64(Console.ReadLine());
+                    double nd1ll = ll.setd1ll(d1ll);
+
+                    Console.Write("Masukkan Diagonal 2 :");
+                    double d2ll = Convert.ToInt64(Console.ReadLine());
+                    double nd2ll = ll.setd2ll(d2ll);
+
+                    Console.Write("Masukkan Sisi A :");
+                    double sisiall = Convert.ToInt64(Console.ReadLine());
+                    double nsisiall = ll.setsisiall(sisiall);
+
+                    Console.Write("Masukkan Sisi B :");
+                    double sisibll = Convert.ToInt64(Console.ReadLine());
+                    double nsisibll = ll.setsisibll(sisibll);
+                    Console.WriteLine("Luas Layang-Layang :{0}", d1ll * d2ll / 2);
+                    Console.WriteLine("Keliling Layang-Layang :{0}", 2 * (sisiall + sisibll));
+                    Console.Write("Kembali ke menu awal? (Y/T) : ");
+                    jawab2 = Console.ReadLine();
+                    if (jawab2 == "Y" || jawab2 == "y")
+                        goto menu2;
+                    else
+                        Environment.Exit(0);
+                    break;
+                case 6:
+                    Console.Clear();
+                    bangundatar bk = new bangundatar();
+                    bk.getd1bk();
+                    bk.getd2bk();
+                    bk.getsisibk();
+                    Console.WriteLine("Belah Ketupat");
+                    Console.Write("Masukkan Diagonal 1 :");
+                    double d1 = Convert.ToInt64(Console.ReadLine());
+                    double nd1bk = bk.setd1bk(d1);
+
+                    Console.Write("Masukkan Diagonal 2 :");
+                    double d2 = Convert.ToInt64(Console.ReadLine());
+                    double nd2bk = bk.setd2bk(d2);
+
+                    Console.Write("Masukkan Sisi :");
+                    double sisib = Convert.ToInt64(Console.ReadLine());
+                    double sisibk = bk.setsisibk(sisib);
+
+                    Console.WriteLine("Luas Belah ketupat :{0}", d1 * d2 / 2);
+                    Console.WriteLine("Keliling Belah Ketupat :{0}", 4 * sisib);
+                    Console.Write("Kembali ke menu awal? (Y/T) : ");
+                    jawab2 = Console.ReadLine();
+                    if (jawab2 == "Y" || jawab2 == "y")
+                        goto menu2;
+                    else
+                        Environment.Exit(0);
+                    break;
+                case 7:
+                    Console.Clear();
+                    bangundatar l = new bangundatar();
+                    l.getjaril();
+                    Console.WriteLine("Lingkaran");
+
+                    Console.Write("Masukkan Jari-Jari :");
+                    double jari1 = Convert.ToInt64(Console.ReadLine());
+                    double njaril = l.setjaril(jari1);
+
+                    Console.WriteLine("Luas Lingkaran :{0}", 22 / 7 * jari1 * jari1);
+                    Console.WriteLine("Keliling Lingkaran :{0}", 4 * (2 * jari1));
+                    Console.Write("Kembali ke menu awal? (Y/T) : ");
+                    jawab2 = Console.ReadLine();
+                    if (jawab2 == "Y" || jawab2 == "y")
+                        goto menu2;
+                    else
+                        Environment.Exit(0);
+                    break;
+                case 8:
+                    Console.Clear();
+                    bangundatar t = new bangundatar();
+                    t.getaT();
+                    t.gettT();
+                    t.getsaT();
+                    t.getsbT();
+                    t.getscT();
+                    t.getsdT();
+                    Console.WriteLine("Trapesium");
+                    Console.Write("Masukan Alas Trapesium : ");
+                    double aT = Convert.ToInt64(Console.ReadLine());
+                    double naT = t.setaT(aT);
+
+                    Console.Write("Masukan Tinggi Trapesium : ");
+                    double tT = Convert.ToInt64(Console.ReadLine());
+                    double ntT = t.settT(tT);
+
+                    Console.Write("Masukan Sisi A Trapesium : ");
+                    double saT = Convert.ToInt64(Console.ReadLine());
+                    double nsaT = t.setsaT(saT);
+
+                    Console.Write("Masukan Sisi B Trapesium : ");
+                    double sbT = Convert.ToInt64(Console.ReadLine());
+                    double nsbT = t.setsbT(sbT);
+
+                    Console.Write("Masukan Sisi C Trapesium : ");
+                    double scT = Convert.ToInt64(Console.ReadLine());
+                    double nscT = t.setscT(scT);
+
+                    Console.Write("Masukan Sisi D Trapesium : ");
+                    double sdT = Convert.ToInt64(Console.ReadLine());
+                    double nsdT = t.setsdT(sdT);
+
+                    Console.WriteLine("Luas Trapesium :{0}", 1 / 2 * (saT + scT) * tT);
+                    Console.WriteLine("Keliling Trapesium :{0}", saT + sbT + scT + sdT);
+                    Console.Write("Kembali ke menu awal? (Y/T) : ");
+                    jawab2 = Console.ReadLine();
+                    if (jawab2 == "Y" || jawab2 == "y")
+                        goto menu2;
+                    else
+                        Environment.Exit(0);
+                    break;
+            }
+        }
+        //Persegi panjang
+        private double panjangpp;
+        public double getpanjangpp()
+        {
+            return panjangpp;
+        }
+        public double setpanjangpp(double npanjangpp)
+        {
+            panjangpp += npanjangpp;
+            return npanjangpp;
+        }
+        private double lebarpp;
+        public double getlebarpp()
+        {
+            return lebarpp;
+        }
+        public double setlebarpp(double nlebarpp)
+        {
+            lebarpp += nlebarpp;
+            return nlebarpp;
+        }
+
+
+        //Segtiga
+        private double alassg;
+        public double getalassg()
+        {
+            return alassg;
+        }
+        public double setalassg(double nalassg)
+        {
+            alassg += nalassg;
+            return nalassg;
+        }
+
+        private double tinngisg;
+        public double gettinggisg()
+        {
+            return tinngisg;
+        }
+        public double settinggisg(double ntinggisg)
+        {
+            tinngisg += ntinggisg;
+            return ntinggisg;
+        }
+
+        //Lingkaran
+        private double jaril;
+        public double getjaril()
+        {
+            return jaril;
+        }
+        public double setjaril(double njaril)
+        {
+            jaril += njaril;
+            return njaril;
+        }
+
+        //Jajar Genjang
+        private double alasjg;
+        public double getalasjg()
+        {
+            return alasjg;
+        }
+        public double setalasjg(double nalasjg)
+        {
+            alasjg += nalasjg;
+            return nalasjg;
+        }
+        private double tinggijg;
+        public double gettinggijg()
+        {
+            return tinggijg;
+        }
+        public double settinggijg(double ntinggijg)
+        {
+            tinggijg += ntinggijg;
+            return ntinggijg;
+        }
+        private double sisijg;
+        public double getsisijg()
+        {
+            return sisijg;
+        }
+        public double setsisijg(double nsisijg)
+        {
+            sisijg += nsisijg;
+            return nsisijg;
+        }
+
+        //Persegi
+        private double sisip;
+        public double getsisip()
+        {
+            return sisip;
+        }
+        public double setsisip(double nsisip)
+        {
+            sisip += nsisip;
+            return sisip;
+        }
+
+        //Belah Ketupat
+        private double d1bk;
+        public double getd1bk()
+        {
+            return d1bk;
+        }
+        public double setd1bk(double nd1bk)
+        {
+            d1bk += nd1bk;
+            return nd1bk;
+        }
+
+        private double d2bk;
+        public double getd2bk()
+        {
+            return d2bk;
+        }
+        public double setd2bk(double nd2bk)
+        {
+            d2bk += nd2bk;
+            return nd2bk;
+        }
+        private double sisibk;
+        public double getsisibk()
+        {
+            return sisibk;
+        }
+        public double setsisibk(double nsisibk)
+        {
+            sisibk += nsisibk;
+            return nsisibk;
+        }
+
+        //Trapesium
+        private double aT;
+        public double getaT()
+        {
+            return aT;
+        }
+        public double setaT(double naT)
+        {
+            aT += naT;
+            return naT;
+        }
+        private double tT;
+        public double gettT()
+        {
+            return tT;
+        }
+        public double settT(double ntT)
+        {
+            tT += ntT;
+            return ntT;
+        }
+        private double saT;
+        public double getsaT()
+        {
+            return saT;
+        }
+        public double setsaT(double nsaT)
+        {
+            saT += nsaT;
+            return nsaT;
+        }
+        private double sbT;
+        public double getsbT()
+        {
+            return sbT;
+        }
+        public double setsbT(double nsbT)
+        {
+            sbT += nsbT;
+            return nsbT;
+        }
+        private double scT;
+        public double getscT()
+        {
+            return scT;
+        }
+        public double setscT(double nscT)
+        {
+            scT += nscT;
+            return nscT;
+        }
+        private double sdT;
+        public double getsdT()
+        {
+            return sdT;
+        }
+        public double setsdT(double nsdT)
+        {
+            sdT += nsdT;
+            return nsdT;
+        }
+
+        //Layang-layang
+        private double d1ll;
+        public double getd1ll()
+        {
+            return d1ll;
+        }
+        public double setd1ll(double nd1ll)
+        {
+            d1ll += nd1ll;
+            return nd1ll;
+        }
+
+        private double d2ll;
+        public double getd2ll()
+        {
+            return d2ll;
+        }
+        public double setd2ll(double nd2ll)
+        {
+            d2ll += nd2ll;
+            return nd2ll;
+        }
+        private double sisiall;
+        public double getsisiall()
+        {
+            return sisiall;
+        }
+        public double setsisiall(double nsisiall)
+        {
+            sisiall += nsisiall;
+            return nsisiall;
+        }
+        private double sisibll;
+        public double getsisibll()
+        {
+            return sisibll;
+        }
+        public double setsisibll(double nsisibll)
+        {
+            sisibll += nsisibll;
+            return nsisibll;
+        }
+    }
+}

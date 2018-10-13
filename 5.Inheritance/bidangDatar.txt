@@ -1,0 +1,27 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace bidang_datar
+{
+    class bidangDatar
+    {
+
+        
+        public double Luas;
+        public double Keliling;
+        public double phi = 3.14;
+       
+        public virtual double luas()
+        {
+            return Luas;
+        }
+        public virtual double keliling()
+        {
+            return Keliling;
+
+        }
+    }
+}
